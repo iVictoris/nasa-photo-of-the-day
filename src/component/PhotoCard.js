@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import axios from 'axios';
 
 import Card from './Card';
 import Caption from './Caption';
@@ -11,7 +12,9 @@ const PhotoCard = ({className = 'PhotoCard', apiKey = ''}) => {
   useEffect(() => {
     // fetch data to...
     // https://api.nasa.gov/planetary/apod?api_key=${apiKey}
-    
+
+    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`).then(console.log).catch(console.log);
+
   }, []);
   
   return (
