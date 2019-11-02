@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({className = 'Card'}) => {
   return (
-    <div>
+    <section className={className}>
       
-    </div>
+    </section>
   )
 }
 
