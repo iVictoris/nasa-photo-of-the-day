@@ -6,23 +6,38 @@ import Caption from './Caption';
 import Image from './Image';
 import Title from './Title';
 
-const PhotoCard = ({className = 'PhotoCard', apiKey = ''}) => {
+const PhotoCard = ({className = 'PhotoCard', apiKey = 'DEMO_KEY'}) => {
   const [data, setData] = useState({});
 
   useEffect(() => {
     // fetch data to...
     // https://api.nasa.gov/planetary/apod?api_key=${apiKey}
 
-    axios.get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`).then(console.log).catch(console.log);
+    axios
+    .get(`https://api.nasa.gov/planetary/apod?api_key=${apiKey}`).then(({data}) => {
+      const {explanation, hdurl, url, title, media_type} = data;
+      const neededData = {
+        explanation, hdurl, url, title, media_type
+      }
+      setData(neededData)
+    })
+    .catch(console.log);
+    // data = {
+      // explanation,
+      // hdurl,
+      // url,
+      // title,
+      // media_type
+    }, []);
 
-  }, []);
+    const {title, url, explanation} = data;
   
   return (
     <section className={className}>
       <Card>
-        <Title />
-        <Image />
-        <Caption />
+        <Title value={title}/>
+        <Image src={url}/>
+        <Caption value={explanation}/>
       </Card>
     </section>
   )
