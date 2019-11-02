@@ -1,12 +1,15 @@
+import 'dotenv/config';
 import React from "react";
 import "./App.css";
+import PhotoCard from './component/PhotoCard';
+
+const apiKey = process.env.NASA_KEY
 
 function App() {
   return (
     <div className="App">
       <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
+        <PhotoCard apiLey={apiKey} />
       </p>
     </div>
   );
