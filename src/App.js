@@ -1,9 +1,8 @@
-import 'dotenv/config';
 import React from "react";
 import "./App.css";
 import PhotoCard from './component/PhotoCard';
 
-const apiKey = process.env.NASA_KEY
+const apiKey = process.env.REACT_APP_NASA_KEY
 
 function App() {
   return (
