@@ -50,10 +50,12 @@ const PhotoCard = ({ className = "PhotoCard", apiKey = "DEMO_KEY" }) => {
 
   return (
     <section className={className}>
-      <Card>
-        <Title value={title} />
-        <Image src={url} />
-        <Caption value={explanation} />
+      <Card className='card'>
+        <section className='card-body'>
+        <Title value={title} className='card-title' />
+        <Image src={url} className='card-img-top'/>
+        <Caption value={explanation} className='card-text' />
+        </section>
       </Card>
     </section>
   );
