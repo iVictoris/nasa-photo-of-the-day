@@ -9,9 +9,7 @@ console.log(apiKey);
 function App() {
   return (
     <div className="App">
-      <p>
         <PhotoCard apiKey={apiKey} />
-      </p>
     </div>
   );
 }
