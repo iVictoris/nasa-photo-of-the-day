@@ -4,7 +4,6 @@ import PhotoCard from './component/PhotoCard';
 import "./component/components.css";
 
 const apiKey = process.env.REACT_APP_NASA_KEY
-console.log(apiKey);
 
 function App() {
   return (
