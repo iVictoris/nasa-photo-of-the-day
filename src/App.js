@@ -1,13 +1,14 @@
 import React from "react";
 import "./App.css";
+import PhotoCard from './component/PhotoCard';
+import "./component/components.css";
+
+const apiKey = process.env.REACT_APP_NASA_KEY
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+        <PhotoCard apiKey={apiKey} />
     </div>
   );
 }

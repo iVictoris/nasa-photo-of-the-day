@@ -1,0 +1,29 @@
+.PhotoCard {
+  width: 400px;
+  height: 575px;
+  margin: 15px;
+}
+
+.Card, .card {
+  box-shadow: 1px 1px 2px 2px black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 10px;
+  padding-bottom: 15px;
+}
+
+.Caption {
+  font-size: 8px;
+  font-weight: bolder;
+  width: 80%;
+  text-align: justify;
+}
+
+.Image, .card-img-top {
+  width: 80%;
+  margin-bottom: 10px;
+}
+
+.Title {
+}
